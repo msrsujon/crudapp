@@ -109,18 +109,18 @@ class _ProductListScreenState extends State<ProductListScreen> {
       builder: (context) {
         return AlertDialog(
           title: const Text('Are you sure? Will you delete this product?'),
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.green,
           content: Container(
             decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(16)),
-                border: Border.all(color: Colors.grey)),
+                border: Border.all(color: Colors.green)),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
                 ListTile(
                   leading: Image(
-                    height: 100,
-                    width: 70,
+                    height: 80,
+                    width: 60,
                     image: NetworkImage('${product.image}'),
                     errorBuilder: (context, error, stackTrace) {
                       return Image.network(
@@ -137,7 +137,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                       Text('Total Price:  ${product.totalPrice ?? ''}'),
                     ],
                   ),
-                  tileColor: Colors.white,
+                  tileColor: Colors.green,
                 ),
               ],
             ),
@@ -161,7 +161,7 @@ class _ProductListScreenState extends State<ProductListScreen> {
                   Navigator.pop(context);
                 },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red,
+                  backgroundColor: Colors.amber,
                 ),
                 child: const Text(
                   'YES',
